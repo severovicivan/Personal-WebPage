@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">  
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/app/scss/style.css">
+  <title>Frontend Mentor | Easybank landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="overlay has-fade"></div>
+    <!-- Helper class defined in _glob.scss -->
+    <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+      <a href="/" class="header__logo">
+        <img src="/images/logo_disk.svg" alt="SeveAs">
+      </a>
+      <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <div class="header__links hide-for-mobile">
+        <a href="#" class="link">Home</a>
+        <a href="#" class="link">About</a>
+        <a href="#" class="link">Contact</a>
+        <a href="#" class="link">Blog</a>
+        <a href="#" class="link">Careers</a>
+      </div>
+
+      <a href="#" class="button header__cta hide-for-mobile">Request Invite</a>
+    </nav>
+
+    <div class="header__menu has-fade">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__image"></div>
+      <div class="hero__text container--pall">
+        <h1>
+          My personal website
+        </h1>
+        <p>
+          If you want to build a webpage or webshop than I am right guy for you.
+        </p>
+        <a href="#" class="button hero__cta">Contact me</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature">
+
+    <div class="feature__content container container--pall">
+      <div class="feature__intro">
+        <h2>Why choose me?</h2>
+        <p>Because I can help you a lot.</p>
+      </div>
+      <!-- First we need to create parent flex el. -->
+      <div class="feature__grid">
+        <div class="feature__item">
+          <div class="feature__icon">
+            <img src="/images/icon-online.svg">
+          </div>
+          <div class="feature__title">
+            Webshops
+          </div>
+          <div class="feature__description">
+            If you want to sell your product online I can make a webshop for you.
+          </div>
+        </div>
+        <div class="feature__item">
+          <div class="feature__icon">
+            <img src="/images/icon-online.svg">
+          </div>
+          <div class="feature__title">
+            Webshops
+          </div>
+          <div class="feature__description">
+            If you want to sell your product online I can make a webshop for you.
+          </div>
+        </div>
+        <div class="feature__item">
+          <div class="feature__icon">
+            <img src="/images/icon-online.svg">
+          </div>
+          <div class="feature__title">
+            Webshops
+          </div>
+          <div class="feature__description">
+            If you want to sell your product online I can make a webshop for you.
+          </div>
+        </div>
+        <div class="feature__item">
+          <div class="feature__icon">
+            <img src="/images/icon-online.svg">
+          </div>
+          <div class="feature__title">
+            Webshops
+          </div>
+          <div class="feature__description">
+            If you want to sell your product online I can make a webshop for you.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/app/js/script.js"></script>
+</body>
+</html>

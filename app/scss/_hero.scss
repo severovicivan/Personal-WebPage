@@ -1,0 +1,88 @@
+.hero{
+    background-color: $veryLightGray;
+
+    .container {
+        @include breakpoint-up(large){
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__image{
+        // To see div size
+        // border: 1px solid magenta;
+        position: relative;
+        background-image: url('/images/bg-intro-mobile.svg');
+        // To keep correct aspect and fill entire div
+        background-size: cover;
+        background-repeat: no-repeat;
+        // Centering image in div
+        background-position: center center;
+        min-height: 17.5rem;
+
+        @include breakpoint-up(medium){
+            min-height: 25rem;
+            background-position: center 60%;
+        }
+
+        @include breakpoint-up(large){
+            flex: 3;
+            order: 2;
+            height: 41rem;
+            background-image: none;
+            // background-image: url('/images/bg-intro-desktop.svg');
+            // background-position: left center;
+        }
+
+        &::before {
+
+            @include breakpoint-up(large){
+                content: "";
+                position: absolute; //parent must be relative
+                height: 100%; //to match height of parent
+                background-image: url('/images/bg-intro-desktop.svg');
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                width: 150%;
+                background-size: 122%;
+                // background-repeat: no-repeat; 
+                background-position: 0% 83%;
+            }
+        }
+
+        &::after {
+            // To show before psel we must add content
+            content: "";
+            position: absolute; //parent must be relative
+            width: 100%; //to show whole picture
+            height: 100%; //to match height of parent
+            background-image: url('/images/image-mockups.png');
+            background-size: 93%;
+            background-repeat: no-repeat;
+            // Horizontal and vertical properties
+            background-position: center bottom;
+
+            @include breakpoint-up(medium){
+                background-size: 52%;
+            }
+
+            @include breakpoint-up(large) {
+                width: 120%;
+                height: 122%;
+                background-size: 94%;
+                background-position: center 150%;
+                left: 22%;
+            }
+        }
+    }
+
+    &__text{
+        text-align: center;
+
+        @include breakpoint-up(large){
+            flex: 2;
+            order: 1;
+            text-align: left;
+        }
+    }
+}
