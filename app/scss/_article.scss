@@ -1,5 +1,5 @@
 .articles {
-
+    background-color: $veryLightGray;
 }
 
 .article {
@@ -9,7 +9,18 @@
     }
 
     &__grid {
+        display: grid;
+        // fr - fractional unit (auto space ratio)
+        grid-template-columns: 1fr;
 
+        @include breakpoint-up(medium){
+            // For tablet we want 2 columns
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 
     &__item {
