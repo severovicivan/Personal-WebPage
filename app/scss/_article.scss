@@ -10,11 +10,18 @@
 
     &__grid {
         display: grid;
+
+        // 1) AI will decide number of columns
+        // 2) Column min and max width, fr -> entire row
+        // grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
+
         // fr - fractional unit (auto space ratio)
         grid-template-columns: 1fr;
+        // Space between
+        gap: 1.875rem;
 
         @include breakpoint-up(medium){
-            // For tablet we want 2 columns
+            // For tablet we want 2 columns (how many, size)
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -28,7 +35,11 @@
     }
 
     &__image {
-
+        height: 12.5rem;
+        // Ensure it will take up entire div
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 
     &__text {
