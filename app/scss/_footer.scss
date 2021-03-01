@@ -1,7 +1,40 @@
 // BEM - Block Element Modifyer
 .footer {
+    background-color: $darkBlue;
+    color: $white;
+
+    a {
+        // To ensure that text links will have light color
+        color: $white;
+    }
 
     &__logo {
-        
+
+    }
+
+    &__social {
+
+    }
+
+    &__links {
+
+        &.col1 {
+
+        }
+
+        &.col2 {
+
+        }
+    }
+
+    &__cta {
+
+        a.button {
+
+        }
+    }
+
+    &__copyright {
+
     }
 }
