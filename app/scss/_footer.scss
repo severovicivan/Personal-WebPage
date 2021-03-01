@@ -5,6 +5,19 @@
     padding: 2.5rem; //40px
     text-align: center;
 
+    // On mobile it will be stacked one column layout
+    @include breakpoint-up(large){
+        display: grid;
+        // First 3 columns will be 1fr width, and last 2fr
+        grid-template-columns: repeat(3, 1fr) 2fr;
+        // Each of 2 rows will have same amount of space
+        grid-template-rows: repeat(2, 1fr);
+        // Representation of rows (each name = column)
+        grid-template-areas: 
+            "logo links1 links2 cta"
+            "social links1 links2 cta";
+    }
+
     a {
         // To ensure that text links will have light color
         color: $white;
@@ -14,10 +27,20 @@
         // To enable spacing inside <a> that makes els sticky
         display: inline-block;
         margin-bottom: 1.875rem;
+
+        @include breakpoint-up(large){
+            // Connecting class with grid area name
+            grid-area: logo;
+        }
     }
 
     &__social {
         margin-bottom: 1.875rem;
+
+        @include breakpoint-up(large){
+            // Connecting class with grid area name
+            grid-area: social;
+        }
 
         a {
             display: inline-block;
@@ -35,11 +58,19 @@
         align-items: center;
 
         &.col1 {
-
+            @include breakpoint-up(large){
+                // Connecting class with grid area name
+                grid-area: links1;
+            }
         }
 
         &.col2 {
             margin-bottom: 1.875rem;
+
+            @include breakpoint-up(large){
+                // Connecting class with grid area name
+                grid-area: links2;
+            }
         }
 
         a {
@@ -48,6 +79,11 @@
     }
 
     &__cta {
+
+        @include breakpoint-up(large){
+            // Connecting class with grid area name
+            grid-area: cta;
+        }
 
         a.button {
             margin-bottom: 1.875rem;
