@@ -5,17 +5,21 @@
     padding: 2.5rem; //40px
     text-align: center;
 
-    // On mobile it will be stacked one column layout
-    @include breakpoint-up(large){
-        display: grid;
-        // First 3 columns will be 1fr width, and last 2fr
-        grid-template-columns: repeat(3, 1fr) 2fr;
-        // Each of 2 rows will have same amount of space
-        grid-template-rows: repeat(2, 1fr);
-        // Representation of rows (each name = column)
-        grid-template-areas: 
-            "logo links1 links2 cta"
-            "social links1 links2 cta";
+    .container {
+        // On mobile it will be stacked one column layout
+        @include breakpoint-up(large){
+            display: grid;
+            // First 3 columns will be 1fr width, and last 2fr
+            grid-template-columns: repeat(3, 1fr) 2fr;
+            // Each of 2 rows will have same amount of space
+            // grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 1fr auto;
+            // Representation of rows (each name = column)
+            grid-template-areas: 
+                "logo links1 links2 cta"
+                "social links1 links2 copyright";
+            justify-items: start;
+        }
     }
 
     a {
@@ -26,7 +30,10 @@
     &__logo {
         // To enable spacing inside <a> that makes els sticky
         display: inline-block;
-        margin-bottom: 1.875rem;
+
+        @include breakpoint-down(medium){
+            margin-bottom: 1.875rem;
+        }
 
         @include breakpoint-up(large){
             // Connecting class with grid area name
@@ -35,15 +42,20 @@
     }
 
     &__social {
-        margin-bottom: 1.875rem;
+
+        @include breakpoint-down(medium){
+            margin-bottom: 1.875rem;
+        }
 
         @include breakpoint-up(large){
             // Connecting class with grid area name
             grid-area: social;
+            align-self: end;
         }
 
         a {
             display: inline-block;
+            height: 1.25rem;
         }
 
         // Last <a> won't be affected by changes in {}
@@ -56,8 +68,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 0.9375rem;
+
+        @include breakpoint-up(large){
+            // To replace line height between links
+            justify-items: space-between;
+            align-items: start;
+        }
 
         &.col1 {
+
             @include breakpoint-up(large){
                 // Connecting class with grid area name
                 grid-area: links1;
@@ -65,7 +85,10 @@
         }
 
         &.col2 {
-            margin-bottom: 1.875rem;
+
+            @include breakpoint-down(medium){
+                margin-bottom: 1.875rem;
+            }
 
             @include breakpoint-up(large){
                 // Connecting class with grid area name
@@ -83,14 +106,26 @@
         @include breakpoint-up(large){
             // Connecting class with grid area name
             grid-area: cta;
+            text-align: right;
+            justify-self: end;
         }
 
         a.button {
-            margin-bottom: 1.875rem;
+            @include breakpoint-down(medium){
+                margin-bottom: 1.875rem;
+            }
         }
     }
 
     &__copyright {
+        font-size: 0.9375rem;
 
+        @include breakpoint-up(large){
+            grid-area: copyright;
+            // Sticking item to bottom of grid cell
+            align-self: end;
+            // Sticking item to the right side of cell
+            justify-self: end;
+        }
     }
 }
