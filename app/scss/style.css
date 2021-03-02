@@ -571,7 +571,7 @@ button:hover::before, .button:hover::before {
 }
 
 .articles {
-  background-color: #fafafa;
+  background-color: white;
 }
 
 .article__grid {
@@ -650,6 +650,7 @@ button:hover::before, .button:hover::before {
   color: white;
   padding: 2.5rem;
   text-align: center;
+  margin-top: 3.55rem;
 }
 
 @media (min-width: 64em) {
