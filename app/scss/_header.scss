@@ -1,5 +1,8 @@
 .header {
     // Hamburger Open Styles
+    position: relative;
+    z-index: 1;
+    
     // We'll add helper class open
     &.open {
 

@@ -145,10 +145,11 @@ a, a:visited, a:hover {
 // Buttons (gradient background)
 // .button is class for a tag
 button, .button {
+    position: relative;
     display: inline-block;
     // x and y?
     padding: 0.875rem 2.1875rem;
-    background: linear-gradient(to right, $limeGreen, $brightCyan);
+    background-image: linear-gradient(to right, $limeGreen, $brightCyan);
     border: 0;
     border-radius: 50px;
     // On hover will appear hand icon
@@ -157,6 +158,27 @@ button, .button {
     font-weight: 400;
     font-size: $font-sm;
     transition: opacity 300ms ease-in-out;
+    overflow: hidden;
+
+    // Adding pseudo element
+    &::before {
+        // It's blank but it exist
+        content: "";
+        // Ensuring psel to stay inside relative parent button
+        position: absolute;
+        // It will stretch all acros
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.25);
+        opacity: 0;
+        transition: opacity 150ms ease-in-out;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
 }
 
 // Visibility (width: desk/mobile&tablet)
