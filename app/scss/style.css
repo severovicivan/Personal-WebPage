@@ -632,11 +632,12 @@ button, .button {
   .footer .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3] 2fr;
-        grid-template-columns: repeat(3, 1fr) 2fr;
+    -ms-grid-columns: 2fr 1fr 1fr 2fr;
+        grid-template-columns: 2fr 1fr 1fr 2fr;
     -ms-grid-rows: 1fr auto;
         grid-template-rows: 1fr auto;
         grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
+    gap: 1rem;
     justify-items: start;
   }
 }
@@ -746,7 +747,8 @@ button, .button {
 }
 
 .footer__copyright {
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
+  color: #9698a6;
 }
 
 @media (min-width: 64em) {
