@@ -76,7 +76,7 @@
     <div class="feature__content container container--pall">
       <div class="feature__intro">
         <h2>What can I do?</h2>
-        <p>A lot of things but most interesting are below.</p>
+        <p>A lot of things but most interesting are mentioned below.</p>
       </div>
       <!-- First we need to create parent flex el. -->
       <div class="feature__grid">
@@ -88,7 +88,7 @@
             API's
           </div>
           <div class="feature__description">
-            If you want to sell your product online I can make a webshop for you.
+            If you want to integrate additional features to your apps, custom APIs are there for you.
           </div>
         </div>
         <div class="feature__item">
@@ -99,7 +99,7 @@
             Microservices
           </div>
           <div class="feature__description">
-            If you want to sell your product online I can make a webshop for you.
+            If API is different programming language than your app Docker can take care of that.
           </div>
         </div>
         <div class="feature__item">
@@ -110,7 +110,7 @@
             Web Apps
           </div>
           <div class="feature__description">
-            If you want to sell your product online I can make a webshop for you.
+            If you have idea and don't know to implement it, making an app is not a problem.
           </div>
         </div>
         <div class="feature__item">
@@ -121,7 +121,7 @@
             Web Shops
           </div>
           <div class="feature__description">
-            If you want to sell your product online I can make a webshop for you.
+            Products can be selled via webshop and CorvusPay or PayPal will take care of money.
           </div>
         </div>
       </div>
@@ -132,47 +132,132 @@
     <div class="article__content container container--pall">
       <h2>Certificates</h2>
       <div class="article__grid">
-
-        <a href="#" class="article__item">
+        <a href="#" class="article__item" data-bs-toggle="modal" data-bs-target="#exampleModal3">
           <div class="article__image"
-            style="background-image: url('/images/image-currency.jpg')"></div>
+            style="background-image: url('/images/etl/etl.jpg')"></div>
           <div class="article__text">
             <div class="article__author">DataCamp</div>
-            <div class="article__title">Try it</div>
-            <div class="article__description">Then buy it</div>
+            <div class="article__title">ETL</div>
+            <div class="article__description">Click to see</div>
           </div>
         </a>
-        <a href="#" class="article__item">
+        <a href="#" class="article__item" data-bs-toggle="modal" data-bs-target="#exampleModal2">
           <div class="article__image"
-            style="background-image: url('/images/image-currency.jpg')"></div>
+            style="background-image: url('/images/pandas/pandas.jpg');background-size:contain"></div>
           <div class="article__text">
             <div class="article__author">DataCamp</div>
-            <div class="article__title">Try it</div>
-            <div class="article__description">Then buy it</div>
+            <div class="article__title">Pandas</div>
+            <div class="article__description">Click to see</div>
           </div>
         </a>
-        <a href="#" class="article__item">
+        <a href="#" class="article__item" data-bs-toggle="modal" data-bs-target="#exampleModal3">
           <div class="article__image"
-            style="background-image: url('/images/image-currency.jpg')"></div>
+            style="background-image: url('/images/advanced/complex_network.jpg')"></div>
           <div class="article__text">
             <div class="article__author">DataCamp</div>
-            <div class="article__title">Try it</div>
-            <div class="article__description">Then buy it</div>
+            <div class="article__title">Networks</div>
+            <div class="article__description">Click to see</div>
           </div>
         </a>
-        <a href="#" class="article__item">
+        <a href="#" class="article__item " data-bs-toggle="modal" data-bs-target="#exampleModal">
           <div class="article__image"
-            style="background-image: url('/images/image-currency.jpg')"></div>
+            style="background-image: url('/images/laravel/laravel-6.png')"></div>
           <div class="article__text">
             <div class="article__author">Pluralsight</div>
             <div class="article__title">Laravel</div>
-            <div class="article__description">Then buy it</div>
+            <div class="article__description">Click to see</div>
           </div>
         </a>
-
       </div>
     </div>
   </section>
+
+  <!-- Modal 1 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Laravel</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="overflow-y: scroll; height: 60vh;">
+        <img src="/images/laravel/laravel1_certificate-1.jpg" alt="Laravel1" style="width:100%;"><hr>
+        <img src="/images/laravel/laravel2_certificate-1.jpg" alt="Laravel1" style="width:100%;"><hr>
+        <img src="/images/laravel/laravel3_certificate-1.jpg" alt="Laravel1" style="width:100%;">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Pandas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="overflow-y: scroll; height: 60vh;">
+        <img src="/images/pandas/pandas_certificate-1.jpg" alt="Pandas1" style="width:100%;"><hr>
+        <img src="/images/pandas/pandas2_certificate-1.jpg" alt="Pandas2" style="width:100%;"><hr>
+        <img src="/images/pandas/python_certificate-1.jpg" alt="Python1" style="width:100%;"><hr>
+        <img src="/images/pandas/python2_certificate-1.jpg" alt="Python2" style="width:100%;"><hr>
+        <img src="/images/pandas/python3_certificate-1.jpg" alt="Python3" style="width:100%;"><hr>
+        <img src="/images/pandas/python4_certificate-1.jpg" alt="Python4" style="width:100%;">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ETL</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="overflow-y: scroll; height: 60vh;">
+        <img src="/images/etl/extract1_certificate-1.jpg" alt="Import1" style="width:100%;"><hr>
+        <img src="/images/etl/extract2_certificate-1.jpg" alt="Import2" style="width:100%;"><hr>
+        <img src="/images/etl/transform_certificate-1.jpg" alt="Clean" style="width:100%;">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Networks</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="overflow-y: scroll; height: 60vh;">
+        <img src="/images/advanced/network_certificate-1.jpg" alt="Network" style="width:100%;"><hr>
+        <img src="/images/advanced/nlp_certificate-1.jpg" alt="NLP" style="width:100%;"><hr>
+        <img src="/images/advanced/sql_certificate-1.jpg" alt="SQL" style="width:100%;">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <footer class="footer">
 

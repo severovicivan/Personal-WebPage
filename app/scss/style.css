@@ -278,6 +278,10 @@ button:hover::before, .button:hover::before {
   }
 }
 
+hr {
+  height: 0.25rem !important;
+}
+
 .header {
   position: relative;
   z-index: 1;
