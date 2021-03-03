@@ -56,22 +56,22 @@
             position: absolute; //parent must be relative
             width: 100%; //to show whole picture
             height: 100%; //to match height of parent
-            background-image: url('/images/image-mockups.png');
+            background-image: url('/images/smartmockups_klsotf2q.png');
             background-size: 93%;
             background-repeat: no-repeat;
             // Horizontal and vertical properties
             background-position: center bottom;
 
             @include breakpoint-up(medium){
-                background-size: 52%;
+                background-size: 60%;
             }
 
             @include breakpoint-up(large) {
                 width: 120%;
                 height: 122%;
-                background-size: 94%;
-                background-position: center 150%;
-                left: 22%;
+                background-size: 105%;
+                background-position: center 20%;
+                left: 28%;
             }
         }
     }
